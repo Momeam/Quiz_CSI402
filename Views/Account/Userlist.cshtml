@@ -1,0 +1,19 @@
+@model IEnumerable<Quiz_67127924_Chanapol.Models.UserViewModel>
+@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+<h2>User List</h2>
+<table class="table border">
+    <thead>
+        <tr><th>User Id</th><th>Name</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserId</td>
+                <td>@user.FullName</td>
+            </tr>
+        }
+    </tbody>
+</table>

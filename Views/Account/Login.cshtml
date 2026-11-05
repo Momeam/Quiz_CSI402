@@ -1,0 +1,21 @@
+@model Quiz_67127924_Chanapol.Models.LoginViewModel
+@{
+    
+    Layout = "~/Views/Shared/_BlankLayout.cshtml";
+    ViewData["Title"] = "Login";
+}
+
+<div style="max-width: 400px; margin: 50px auto; font-family: sans-serif;">
+    <h2>Login</h2>
+    <form asp-action="Login" method="post">
+        <div style="margin-bottom: 15px;">
+            <label>User Id :</label><br />
+            <input asp-for="UserId" type="text" style="width: 100%; padding: 8px;" required />
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label>Password :</label><br />
+            <input asp-for="Password" type="password" style="width: 100%; padding: 8px;" required />
+        </div>
+        <button type="submit" style="padding: 10px 20px; cursor: pointer;">Login</button>
+    </form>
+</div>

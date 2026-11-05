@@ -1,0 +1,16 @@
+@model Quiz_67127924_Chanapol.Models.ScoreViewModel
+@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+<h2>Calculate Form</h2>
+<form asp-action="CalculateForm" method="post">
+    
+    @for(int i = 1; i <= 10; i++)
+    {
+        <div class="mb-2">
+            <label>Score @i :</label>
+            <input name="Score@(i)" type="number" value="0" />
+        </div>
+    }
+    <button type="submit" class="btn btn-primary mt-2">Calculate</button>
+</form>
